@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiTempConverter.MainPage">
+
+    <ScrollView
+        BackgroundColor="#31353D">
+        
+        <VerticalStackLayout
+            VerticalOptions="Center"
+            Padding="30,0"
+            Spacing="20">
+
+            <Label
+                HorizontalTextAlignment="Center"
+                TextColor="#EBEBEB"
+                FontAttributes="Bold"
+                FontSize="{OnPlatform iOS=20, Android=22, WinUI=24}"
+                Text="Valuta-konverterare" />
+            
+            <HorizontalStackLayout
+                Spacing="20"
+                HorizontalOptions="Center">
+
+                <Label
+                    VerticalTextAlignment="Center"
+                    TextColor="#EBEBEB"
+                    FontAttributes="Bold"
+                    Text="SEK" />
+
+                <Entry
+                    WidthRequest="100"
+                    BackgroundColor="White"
+                    x:Name="SekEntry"
+                    Placeholder="SEK"
+                    SemanticProperties.Hint="Enter swedish krona"
+                    HorizontalOptions="Center" />
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                Spacing="20"
+                HorizontalOptions="Center">
+
+                <Label
+                    VerticalTextAlignment="Center"
+                    TextColor="#EBEBEB"
+                    FontAttributes="Bold"
+                    Text="USD" />
+
+                <Entry
+                    WidthRequest="100"
+                    BackgroundColor="White"
+                    x:Name="UsdEntry"
+                    Placeholder="USD"
+                    SemanticProperties.Hint="Enter american dollar"
+                    HorizontalOptions="Center" />
+                
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                Spacing="10"
+                HorizontalOptions="Center">
+
+                <Button
+                    x:Name="Empty"
+                    Text="Töm"
+                    BackgroundColor="#EBEBEB"
+                    TextColor="#31353D"
+                    FontAttributes="Bold"
+                    SemanticProperties.Hint="Empties both input fields"
+                    Pressed="OnEmptyPressed"
+                    Released="OnEmptyReleased"                  
+                    HorizontalOptions="Center" />
+
+                <Button
+                    x:Name="Convert"
+                    Text="Konvertera"
+                    BackgroundColor="#EBEBEB"
+                    TextColor="#31353D"
+                    FontAttributes="Bold"
+                    SemanticProperties.Hint="Converts entered field to empty field"
+                    Pressed="OnConvertPressed"
+                    Released="OnConvertReleased"
+                    HorizontalOptions="Center" />
+
+                <Button
+                    x:Name="Stop"
+                    Text="Sluta"
+                    BackgroundColor="#EBEBEB"
+                    TextColor="#31353D"
+                    FontAttributes="Bold"
+                    SemanticProperties.Hint="Shuts down application"
+                    Pressed="OnStopPressed"
+                    Released="OnStopReleased"
+                    HorizontalOptions="Center" />
+
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+        
+    </ScrollView>
+
+</ContentPage>
